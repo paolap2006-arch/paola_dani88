@@ -42,7 +42,7 @@
                         $data = "".$partes[2]."/".$partes[1]."/".$partes[0];
                         echo $data ?>
                     </td>
-                    <td><form action="atualizar.php" method="POST">
+                    <td><form action="editar.php" method="POST">
                         <button class="btn btn-primary" name="btnEditar" 
                         value="<?php echo $linha['id'];?>">Editar</button>
                     </form></td>
