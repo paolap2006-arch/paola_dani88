@@ -1,7 +1,12 @@
 <?php
     include 'conexao.php';
     $id = $_POST['btnExcluir'];
+    
+    //APAGAR MATRICULA SE EXISTIR
+    $sql = $pdo -> prepare("SELECT * FROM matricula WHERE aluno = ?");
+    $sql -> execute([$id]); 
 
+    //APAGAR O ALUNO
     $sql = $pdo->prepare("DELETE FROM Aluno WHERE id = ?");
     $sql->execute([$id]);
 
